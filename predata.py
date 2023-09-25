@@ -3,7 +3,6 @@ import numpy as np
 import shutil
 
 def split(dir = 'data',split_size = [.8,.2]):
-    #TODO add image augmentation
     #generate the splits
     name_files = [file.split('.')[0] for file in os.listdir(f'{dir}/labels')]
     split = np.random.randint(len(name_files),size = len(name_files))
